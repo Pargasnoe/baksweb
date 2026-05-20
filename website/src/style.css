@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'SF Pro Display', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'SF Pro Text', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  --color-navy: #0D1B2A;
+  --color-navy-mid: #1B2E45;
+  --color-navy-light: #253A52;
+  --color-orange: #F57C2B;
+  --color-orange-glow: rgba(245,124,43,0.15);
+  --color-white: #FFFFFF;
+  --color-muted: #8A9BB5;
+  --color-surface: #131F2E;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  font-family: 'SF Pro Text', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'SF Pro Display', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-display { font-family: 'SF Pro Display', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif; }
+.font-body { font-family: 'SF Pro Text', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
