@@ -18,7 +18,6 @@
           :ref="el => { if (el) phoneRefs[i] = el }"
         >
           <div class="mock-frame">
-            <div class="mock-notch"></div>
             <img :src="screen.src" :alt="screen.label" class="mock-screen" />
           </div>
           <p class="mock-label">{{ screen.label }}</p>
@@ -144,19 +143,6 @@ onMounted(() => {
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-}
-.mock-notch {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 18px;
-  background: var(--color-navy-mid);
-  z-index: 2;
-  border-radius: 0 0 12px 12px;
-  border: 2px solid var(--color-navy-light);
-  border-top: none;
 }
 .mock-screen {
   width: 100%;
