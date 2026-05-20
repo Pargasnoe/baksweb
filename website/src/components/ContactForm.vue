@@ -103,10 +103,10 @@ const form = reactive({ fullname: '', email: '', phone: '', role: '', message: '
 async function handleSubmit() {
   loading.value = true
   try {
-    await fetch('/', {
+    await fetch('https://formspree.io/f/mykvelor', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({ 'form-name': 'baks-contact', ...form }).toString()
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form)
     })
     submitted.value = true
     gsap.from('.success-state', { scale: 0.8, opacity: 0, duration: 0.5, ease: 'back.out(2)' })
